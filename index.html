@@ -1,0 +1,106 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css> <link
+		href="styles.css" rel="stylesheet">
+	<script src="app.js"></script>
+</head>
+
+<body>
+
+	<noscript>
+		<strong>We're sorry but Frog Jump Game doesn't work properly without JavaScript enabled. Please
+			enable it to continue.</strong>
+	</noscript>
+	<br>
+	<div class="container is-fluid">
+		<h1 class="title is-1">Frog Jump Game</h1>
+		<br>
+		<button class="button is-primary is-light is-outlined is-rounded" onclick=startNewGame()>Start A New
+			Game</button>
+		<button class="button is-danger is-light is-outlined is-rounded" onclick=showSolution()>Show / Hide
+			Solution</button>
+		<hr>
+		<p id="solution" hidden=true>3 -> 5 -> 6-> 4 -> 2 -> 1 -> 3 -> 5 -> 7 -> 6 -> 4 -> 2 -> 3 -> 5 -> 4</p>
+	</div>
+	<br>
+	<br>
+	<br>
+	<div class="container is-fluid">
+		<div class="notification">
+			<div class="tile is-ancestor">
+				<div class="tile is-parent">
+					<article class="tile is-child box">
+						<p class="title">1</p>
+						<figure class="image is-128x128">
+							<img id="1" class="is-rounded" onclick="myClick(1)" src="./img/red.jpg">
+						</figure>
+					</article>
+				</div>
+				<div class="tile is-parent">
+					<article class="tile is-child box">
+						<p class="title">2</p>
+						<figure class="image is-128x128">
+							<img id="2" class="is-rounded" onclick="myClick(2)" src="./img/red.jpg">
+						</figure>
+					</article>
+				</div>
+				<div class="tile is-parent">
+					<article class="tile is-child box">
+						<p class="title">3</p>
+						<figure class="image is-128x128">
+							<img id="3" class="is-rounded" onclick="myClick(3)" src="./img/red.jpg">
+						</figure>
+					</article>
+				</div>
+				<div class="tile is-parent">
+					<article class="tile is-child box">
+						<p class="title">4</p>
+						<figure class="image is-128x128">
+							<img id="4" class="is-rounded" onclick="myClick(4)" src="./img/default.jpg">
+						</figure>
+					</article>
+				</div>
+				<div class="tile is-parent">
+					<article class="tile is-child box">
+						<p class="title">5</p>
+						<figure class="image is-128x128">
+							<img id="5" class="is-rounded" onclick="myClick(5)" src="./img/blue.jpg">
+						</figure>
+					</article>
+				</div>
+				<div class="tile is-parent">
+					<article class="tile is-child box">
+						<p class="title">6</p>
+						<figure class="image is-128x128">
+							<img id="6" class="is-rounded" onclick="myClick(6)" src="./img/blue.jpg">
+						</figure>
+					</article>
+				</div>
+				<div class="tile is-parent">
+					<article class="tile is-child box">
+						<p class="title">7</p>
+						<figure class="image is-128x128">
+							<img id="7" class="is-rounded" onclick="myClick(7)" src="./img/blue.jpg">
+						</figure>
+					</article>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<div class="content has-text-centered">
+			<p>
+				<strong>Frog Jump Game</strong> by <a href="https://github.com/arminv">Armin Varshokar</a>
+			</p>
+		</div>
+	</footer>
+
+</body>
+
+</html>
