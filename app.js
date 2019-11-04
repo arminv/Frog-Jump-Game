@@ -64,3 +64,6 @@ function myClick(id) {
 		startNewGame();
 	};
 };
+
+// TODO: add timer
+// TODO: use switch statement
