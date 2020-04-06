@@ -1,44 +1,48 @@
 h1 {
-    color: red;
+  color: red;
 }
 
 img {
-    position: relative;
-    float: left;
-    width: 150px;
-    height: 150px;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    cursor: pointer;
+  position: relative;
+  float: left;
+  width: 150px;
+  height: 150px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
 }
 
 .image img.is-rounded {
-    border-radius: 500px;
+  border-radius: 500px;
 }
 
 .image img {
-    display: block;
-    height: auto;
-    width: 100%;
+  display: block;
+  height: auto;
+  width: 100%;
 }
 
 .title {
-    color: #367caa;
-    font-weight: 300;
+  color: #367caa;
+  font-weight: 300;
+}
+
+#heading {
+  text-align: center;
 }
 
 .notification .title,
 .notification .subtitle,
 .notification .content {
-    color: #4592c5;
+  color: #4592c5;
 }
 
 .notification {
-    background-color: rgba(141, 184, 143, 0.308);
-    border-radius: 10px;
+  background-color: rgba(141, 184, 143, 0.308);
+  border-radius: 10px;
 }
 
 .solution {
-    display: none;
+  display: none;
 }

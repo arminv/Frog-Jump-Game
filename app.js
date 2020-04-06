@@ -1,8 +1,27 @@
 const RED_FROG = './img/red.jpg'
 const BLUE_FROG = './img/blue.jpg'
 const STONE = './img/default.jpg'
+let FIRST_TIME_GAME = true;
+
+function incrementTime() {
+	document.getElementById("timer").innerHTML = ++second;
+}
+
+let timerInterval = null;
+
+function startTimer() {
+	// stoping the previous timer (if any)
+	stopTimer();
+	second = 0;
+	timerInterval = setInterval(incrementTime, 1000);
+}
+
+function stopTimer() {
+	clearInterval(timerInterval);
+}
 
 function startNewGame() {
+	startTimer();
 	// reset all images back to initial state:
 	for (i = 1; i <= 3; i++) {
 		document.getElementById(i.toString()).src = RED_FROG
@@ -26,12 +45,14 @@ function checkWin(id) {
 	if ([5, 6, 7].includes(id)) {
 		return document.getElementById(id.toString()).src.slice(-5) === 'd.jpg';
 	}
-
 	return true;
 };
 
 function myClick(id) {
-	console.log(document.getElementById(id.toString()).src);
+	if (FIRST_TIME_GAME) {
+		startTimer();
+		FIRST_TIME_GAME = false;
+	}
 	// Red/Left frog is clicked: 
 	// Check the adjacent place:
 	if (document.getElementById(id.toString()).src.slice(-5) === 'd.jpg') {
@@ -59,12 +80,22 @@ function myClick(id) {
 	}
 
 	// Check if the win condition is satisfied:
-	let myImages = [1, 2, 3, 4, 5, 6, 7];
-	if (myImages.every(checkWin)) {
-		alert('You Win!');
-		startNewGame();
+	function didUserWin() {
+		let myImages = [1, 2, 3, 4, 5, 6, 7];
+		if (myImages.every(checkWin)) {
+			return true;
+		}
+		return false;
+	}
+
+	if (didUserWin()) {
+		stopTimer();
+		let finishTime = document.getElementById("timer").innerHTML;
+		alert(`You Win! You finisehd the game in ${finishTime} seconds!`);
+		// startNewGame();
+		FIRST_TIME_GAME = false;
 	};
 };
 
-// TODO: add timer
-// TODO: use switch statement
+// TODO: improve timer to show minutes, hours, etc.
+// TODO: use switch statements
